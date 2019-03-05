@@ -9,8 +9,8 @@
 
 // using reverse
 // function palindrome(str) {
-//   let newStr = str;
-//   return str === newStr.split('').reverse().join('');
+//   const rev = str.split('').reverse().join('');
+//   return str === rev;
 // }
 
 // not using reverse
@@ -23,8 +23,15 @@
 // }
 
 // using reduce
+// const palindrome = (str) => {
+//   return str === str.split('').reduce((rev, char) => char + rev, '');
+// }
+
+// using every()
 const palindrome = (str) => {
-  return str === str.split('').reduce((rev, char) => char + rev, '');
+  return str.split('').every((char, i) => {
+    return char === str[str.length - i - 1];
+  })
 }
 
 module.exports = palindrome;
