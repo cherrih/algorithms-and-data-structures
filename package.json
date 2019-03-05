@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest 01-reversestring/test.js"
+    "test": "jest 02-palindrome/test.js"
   },
   "jest": {
     "testEnvironment": "node"
