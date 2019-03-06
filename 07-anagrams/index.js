@@ -8,6 +8,8 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+// Initial solution
+
 // function anagrams(stringA, stringB) {
 //   const a = stringA.replace(/[^\w]/g, '').toLowerCase();
 //   const b = stringB.replace(/[^\w]/g, '').toLowerCase();
@@ -28,27 +30,39 @@
 //   return true;
 // }
 
-const buildCharMap = (str) => {
-  const charMap = {};
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-    charMap[char] = charMap[char] + 1 || 1;
-  }
-  return charMap;
+// Solution with helper function
+
+// const buildCharMap = (str) => {
+//   const charMap = {};
+//   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+//     charMap[char] = charMap[char] + 1 || 1;
+//   }
+//   return charMap;
+// }
+
+// const anagrams = (stringA, stringB) => {
+//   const aMap = buildCharMap(stringA);
+//   const bMap = buildCharMap(stringB);
+
+//   if (Object.keys(aMap).length !== Object.keys(bMap).length) {
+//     return false;
+//   }
+//   for (let key in aMap) {
+//     if (aMap[key] !== bMap[key]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// Solution with sort
+
+//clean up strings, sort both strings, check if equal
+const cleanString = (str) => {
+  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
-
 const anagrams = (stringA, stringB) => {
-  const aMap = buildCharMap(stringA);
-  const bMap = buildCharMap(stringB);
-
-  if (Object.keys(aMap).length !== Object.keys(bMap).length) {
-    return false;
-  }
-  for (let key in aMap) {
-    if (aMap[key] !== bMap[key]) {
-      return false;
-    }
-  }
-  return true;
+  return cleanString(stringA) === cleanString(stringB);
 }
 
 
