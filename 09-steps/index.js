@@ -45,12 +45,8 @@ const steps = (n, row = 0, step = '') => {
     console.log(step);
     return steps(n, row + 1);
   } 
-  if (step.length <= row) {
-    step += '#';
-  } else {
-    step += ' ';
-  }
-  steps(n, row, step);
+  const add = step.length <= row ? '#' : ' ';
+  steps(n, row, step + add);
 }
 
 module.exports = steps;
