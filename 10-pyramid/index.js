@@ -33,7 +33,7 @@
 
 // recursive solution
 
-const pyramid = (n, row = 0, col = 0, level = '') => {
+const pyramid = (n, row = 0, level = '') => {
   const maxCol = n * 2 - 1;
   // base case return 
   if (row === n) {
@@ -43,8 +43,8 @@ const pyramid = (n, row = 0, col = 0, level = '') => {
     console.log(level);
     return pyramid(n, row + 1);
   }
-  const add = col <= n - 1 + row && col >= n - 1 - row ? '#' : ' ';
-  pyramid(n, row, col + 1, level + add);
+  const add = level.length <= n - 1 + row && level.length >= n - 1 - row ? '#' : ' ';
+  pyramid(n, row, level + add);
 }
 
 module.exports = pyramid;
