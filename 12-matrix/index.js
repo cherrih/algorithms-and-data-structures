@@ -17,8 +17,10 @@
 
 function matrix(n) {
   // create empty array of arrays
-  const results = new Array(n).fill();
-  results.forEach((el, i) => results[i] = new Array(n));
+  const results = [];
+  for (let i = 0; i < n; i ++) {
+    results.push([]);
+  }
   // create counter variable, starting at 1
   let counter = 1;
   let startCol = 0;
