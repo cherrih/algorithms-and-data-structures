@@ -33,6 +33,8 @@
 //   }
 // }
 
+// runtime complexity: n squared or quadratic
+
 // recursive solution
 
 const steps = (n, row = 0, step = '') => {

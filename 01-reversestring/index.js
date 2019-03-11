@@ -26,4 +26,6 @@ const reverse = (str) => {
   return str.split('').reduce((rev, char) => char + rev, '');
 }
 
+// runtime complexity: linear
+
 module.exports = reverse;
