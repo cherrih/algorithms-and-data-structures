@@ -23,14 +23,22 @@
 
 // recursive solution
 
-const fib = (n, fibs = [0, 1]) => {
-  if (fibs.length === n + 1){
-    return fibs[n];
+// const fib = (n, fibs = [0, 1]) => {
+//   if (fibs.length === n + 1){
+//     return fibs[n];
+//   }
+//   const a = fibs[fibs.length - 1];
+//   const b = fibs[fibs.length - 2];
+//   fibs.push(a + b);
+//   return fib(n, fibs);
+// }
+
+// better recursive solution
+const fib = (n) => {
+  if (n < 2) {
+    return n;
   }
-  const a = fibs[fibs.length - 1];
-  const b = fibs[fibs.length - 2];
-  fibs.push(a + b);
-  return fib(n, fibs);
+  return fib(n - 1) + fib(n - 2);
 }
 
 module.exports = fib;
