@@ -13,10 +13,14 @@ class Queue {
     this.data = [];
   }
   add(record) {
-    this.data.unshift(record);
+    // this.data.unshift(record);
+    this.data = [record, ...this.data]
   }
   remove() {
-    return this.data.pop();
+    // return this.data.pop();
+    const popped = this.data[this.data.length - 1];
+    this.data = this.data.slice(0, this.data.length - 1);
+    return popped;    
   }
 }
 
