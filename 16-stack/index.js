@@ -14,14 +14,14 @@ class Stack {
   constructor() {
     this.data = [];
   }
-  push(content) {
-    this.data.unshift(content);
+  push(record) {
+    this.data.push(record);
   }
   pop() {
-    return this.data.shift();
+    return this.data.pop();
   }
   peek() {
-    return this.data[0];
+    return this.data[this.data.length - 1];
   }
 }
 
