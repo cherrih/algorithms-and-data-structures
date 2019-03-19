@@ -18,15 +18,10 @@ class LinkedList {
   }
   size() {
     let count = 0;
-    const checkNext = (node) => {
-      if(node.next) {
-        count += 1;
-        checkNext(node.next);
-      }
-    } 
-    if (this.head) {
+    let node = this.head;
+    while(node) {
       count += 1;
-      checkNext(this.head);
+      node = node.next;
     }
     return count;
   }
