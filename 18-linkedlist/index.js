@@ -29,7 +29,7 @@ class LinkedList {
     return this.head;
   }
   getLast() {
-    if (!this.head) {
+    if(!this.head) {
       return null;
     }
     let node = this.head;
@@ -42,10 +42,26 @@ class LinkedList {
     this.head = null;
   }
   removeFirst() {
-    if (!this.head) {
+    if(!this.head) {
       return;
     }
     this.head = this.head.next;
+  }
+  removeLast() {
+    if (!this.head){
+      return null;
+    }
+    if (!this.head.next) {
+      return this.head = null;
+    }
+    let node = this.head;
+    while(node.next) {
+      if (node.next.next === null) {
+        node.next = null;
+        return;
+      }
+      node = node.next;
+    }
   }
 }
 
