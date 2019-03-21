@@ -82,6 +82,19 @@ class LinkedList {
     }
     return null;
   }
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+    if (index === 0) {
+      this.head = this.head.next;
+    }
+    const prevNode = this.getAt(index - 1);
+    const nextNode = this.getAt(index + 1);
+    if (prevNode) {
+      prevNode.next = nextNode;
+    }
+  }
 
 }
 
