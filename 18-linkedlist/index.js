@@ -90,12 +90,16 @@ class LinkedList {
       this.head = this.head.next;
     }
     const prevNode = this.getAt(index - 1);
-    const nextNode = this.getAt(index + 1);
-    if (prevNode) {
-      prevNode.next = nextNode;
+    if (!prevNode || !prevNode.next) {
+      return
     }
+    prevNode.next = prevNode.next.next;
+  }
+  insertAt(index) {
+  
   }
 
 }
+
 
 module.exports = { Node, LinkedList };
