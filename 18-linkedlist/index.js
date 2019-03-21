@@ -63,17 +63,12 @@ class LinkedList {
     }
   }
   insertLast(data) {
-    if (!this.head) {
-      return this.head = new Node(data);
+    const last = this.getLast();
+    if (last) {
+      last.next = new Node(data);
+    } else {
+      this.head = new Node(data);      
     }
-    let node = this.head;
-    while(node){
-      if (node.next === null) {
-        return node.next = new Node(data);
-      }
-      node = node.next;
-    }
-
   }
 }
 
