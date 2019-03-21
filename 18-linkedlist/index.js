@@ -70,6 +70,19 @@ class LinkedList {
       this.head = new Node(data);      
     }
   }
+  getAt(index) {
+    let node = this.head;
+    let count = 0;
+    while(node) {
+      if (count === index){
+        return node;
+      }
+      node = node.next;
+      count += 1;
+    }
+    return null;
+  }
+
 }
 
 module.exports = { Node, LinkedList };
