@@ -49,7 +49,7 @@ class LinkedList {
   }
   removeLast() {
     if (!this.head){
-      return null;
+      return;
     }
     if (!this.head.next) {
       return this.head = null;
@@ -57,11 +57,23 @@ class LinkedList {
     let node = this.head;
     while(node.next) {
       if (node.next.next === null) {
-        node.next = null;
-        return;
+        return node.next = null;
       }
       node = node.next;
     }
+  }
+  insertLast(data) {
+    if (!this.head) {
+      return this.head = new Node(data);
+    }
+    let node = this.head;
+    while(node){
+      if (node.next === null) {
+        return node.next = new Node(data);
+      }
+      node = node.next;
+    }
+
   }
 }
 
