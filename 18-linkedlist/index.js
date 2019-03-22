@@ -95,8 +95,24 @@ class LinkedList {
     }
     prevNode.next = prevNode.next.next;
   }
-  insertAt(index) {
-  
+  insertAt(data, index) {
+    // empty list
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+    // if index is 0
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+    const prev = this.getAt(index - 1);
+    // if index out of bounds add to end
+    if (!prev) {
+      this.insertLast(data);
+    } else {
+      prev.next = new Node(data, prev.next);
+    }
   }
 
 }
