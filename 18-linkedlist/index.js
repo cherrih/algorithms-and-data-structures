@@ -106,12 +106,15 @@ class LinkedList {
       this.head = new Node(data, this.head);
       return;
     }
-    const prev = this.getAt(index - 1);
     // if index out of bounds add to end
-    if (!prev) {
-      this.insertLast(data);
-    } else {
-      prev.next = new Node(data, prev.next);
+    const prev = this.getAt(index - 1) || this.getLast();
+    prev.next = new Node(data, prev.next);
+  }
+  forEach(fn) {
+    let node = this.head;
+    while (node) {
+      fn(node);
+      node = node.next;
     }
   }
 
