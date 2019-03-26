@@ -19,11 +19,7 @@ class Node {
     this.children.push(new Node(data));
   }
   remove(data) {
-    this.children.forEach((child, i) => {
-      if (child.data === data) {
-        this.children.splice(i - 1, 1);
-      }
-    })
+    this.children = this.children.filter(child => child.data !== data);
   }
 }
 
