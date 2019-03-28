@@ -17,11 +17,11 @@ function levelWidth(root) {
   const counters = [0];
   const arr = [root, 's'];
   while (arr.length > 1) {
-    if (arr[0] === 's') {
-      arr.push(arr.shift());
+    const node = arr.shift();
+    if (node === 's') {
+      arr.push(node);
       counters.push(0);
     } else {
-      const node = arr.shift();
       arr.push(...node.children);
       counters[counters.length - 1] += 1;
     }
