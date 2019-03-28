@@ -18,18 +18,11 @@ class Node {
     this.right = null;
   }
   insert(data) {
-    if (data < this.data) {
-      if (this.left) {
-        this.left.insert(data);
-      } else {
-        this.left = new Node(data);
-      }
-    } else if (data > this.data) {
-      if (this.right) {
-        this.right.insert(data);
-      } else {
-        this.right = new Node(data);
-      }
+    const direction = data < this.data ? 'left' : 'right';
+    if (this[direction]) {
+      this[direction].insert(data);
+    } else {
+      this[direction] = new Node(data);
     }
   }
 }
