@@ -25,6 +25,17 @@ class Node {
       this[direction] = new Node(data);
     }
   }
+  contains(data) {
+    if (this.data === data) {
+      return this;
+    } 
+    if (data < this.data && this.left) {
+      return this.left.contains(data);
+    } else if (data > this.data && this.right) {
+      return this.right.contains(data);
+    } 
+    return null;
+  }
 }
 
 module.exports = Node;
