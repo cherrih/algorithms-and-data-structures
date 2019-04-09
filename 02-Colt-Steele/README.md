@@ -40,7 +40,7 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 - Recursion sometimes involves logarithmic space complexity
 
 ---
-## Problem Solving
+## Problem Solving Process
 #### Understand the problem
 - Can I restate the problem in my own words?
 - What are the inputs?
@@ -71,3 +71,9 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 - Can you improve the performance of your solution?
 - Can you think of other ways to refactor?
 - How have other people solved this problem?
+
+## Common Problem Solving Patterns
+
+#### Frequency Counters
+- Uses objects or sets to collect values/frequencies of values
+- Avoids the need for nested loops or O(n^2) operations with arrays or strings
