@@ -1,4 +1,7 @@
 const countUniqueValues = (arr) => {
+  if (arr.length < 2) {
+    return arr.length;
+  }
   let first = 0;
   let second = 1;
   while(second < arr.length) {
