@@ -108,3 +108,6 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 
 #### Helper Method Recursion
 - Get around for when we need to compile some sort of result
+
+#### Pure Recursion Tips
+- For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
