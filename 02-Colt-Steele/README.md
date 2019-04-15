@@ -105,3 +105,6 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 #### Common pitfalls
 - No base case (max call stack exceeded)
 - Forgetting to return or returning the wrong thing
+
+#### Helper Method Recursion
+- Get around for when we need to compile some sort of result
