@@ -91,3 +91,13 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data
 - This pattern can tremendously decrease time complexity
 - eg quick sort, merge sort, binary search
+
+---
+## Recursion
+What is recursion?
+- A process (a function in our case) that calls itself
+- Invoke the same function with a different input until you reach your base case
+- Base case is the condition when the recursion ends
+- JSON.parse / JSON.stringify are often called this way
+- document.getElementById and DOM traversal algorithms
+- Object traversal
