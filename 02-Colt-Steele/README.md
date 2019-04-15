@@ -96,7 +96,7 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 ## Recursion
 What is recursion?
 - A process (a function in our case) that calls itself
-- Invoke the same function with a different input until you reach your base case
+- Invoke the same function with a _different input_ until you reach your _base case_
 - Base case is the condition when the recursion ends
 - JSON.parse / JSON.stringify are often called this way
 - document.getElementById and DOM traversal algorithms
