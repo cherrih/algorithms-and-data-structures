@@ -8,3 +8,6 @@ function linearSearch(arr, n) {
 }
 
 console.log(linearSearch([1,4,5,6,2,3,9], 2))
+
+// time complexity: O(n) linear
+// space complexity: O(1)
