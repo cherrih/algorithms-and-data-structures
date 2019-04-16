@@ -4,7 +4,7 @@ class Node{
     this.next = null;
   }
 }
-class linkedList{
+class LinkedList{
   constructor(){
     this.head = null;
     this.tail = null;
@@ -76,4 +76,25 @@ class linkedList{
     target.val = val;
     return true;
   }
+  insert(val, i){
+    if (i < 0 || i > this.length) return false;
+    if (i === this.length) {
+      this.push(val);
+    } else if (i === 0) {
+      this.unshift(val);
+    } else {
+      let newNode = new Node(val);
+      let target = this.get(i-1);
+      newNode.next = target.next;
+      target.next = newNode;
+      this.length ++;
+    }
+    return true;
+  }
 }
+
+var list = new LinkedList();
+list.push(100)
+list.push(200)
+list.push(4)
+console.log(list.insert(0,'FIRST'))
