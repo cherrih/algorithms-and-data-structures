@@ -150,3 +150,10 @@ Pseudocode
 
 #### Bubble Sort 
 - A sorting algorithm where the largest values bubble to the top
+
+#### Selection Sort
+- Similar to bubble sort, but instead of first placing large value into sorted position, it places small values into sorted position
+- Go through and find smallest value, then place this in the first position
+
+
+  
