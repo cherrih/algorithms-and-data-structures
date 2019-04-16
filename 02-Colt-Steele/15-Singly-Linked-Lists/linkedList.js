@@ -40,6 +40,12 @@ class linkedList{
   }
   shift(){
     if(!this.head) return;
-    
+    let current = this.head;
+    this.head = current.next;
+    this.length --;
+    if(!this.length){
+      this.tail = null;
+    }
+    return current;
   }
 }
