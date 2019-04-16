@@ -24,6 +24,7 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 - O(log n) time complexity is great!
 - Certain searching operaitons have logarithmic time complexity
 - Efficient sorting algorithms involve logarithms
+- Every time we double n, we add one extra step
 
 
 

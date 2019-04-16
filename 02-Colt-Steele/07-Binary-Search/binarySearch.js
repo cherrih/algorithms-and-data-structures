@@ -19,3 +19,5 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 2)); // 2
 console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 9)); // 9
 console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 5)); // 4
 console.log(binarySearch([1,2,3,4,5,6,7,8,9,10], 7)); // 6
+
+// time complexity: O(log n) logarithmic
