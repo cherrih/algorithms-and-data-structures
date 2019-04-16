@@ -150,11 +150,63 @@ Pseudocode
 
 #### Bubble Sort 
 - A sorting algorithm where the largest values bubble to the top
+- Time complexity: O(n^2)
+  - If data is almost sorted, this works better
+- Space complexity: O(1)
+
 
 #### Selection Sort
 - Similar to bubble sort, but instead of first placing large value into sorted position, it places small values into sorted position
 - Go through and find smallest value, then place this in the first position
 - Better than bubble sort if you want to minimize the number of swaps eg worried about writing memory
+- Time complexity: O(n^2)
+  - If data is almost sorted, this works better
+- Space complexity: O(1)
 
 #### Insertion Sort
 - Builds up the sort by gradually creating a larger left half which is always sorted
+- Time complexity: O(n^2)
+  - Works well when data is coming in live
+- Space complexity: O(1)
+
+#### Merge Sort
+- It's a combination of merging and sorting
+- Exploits the fact that arrays of 0 or 1 element are always sorted
+- Works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array
+- Time complexity: O(n log n)
+  - this is the best we can do unless we take advantage of data
+- Space complexity: O(n)
+  - more space is used
+
+#### Quick Sort
+- Exploits the fact that arrays of 0 or 1 element are always sorted
+- Works by selecting one element (called the "pivot") and finding the index where the pivot should end up in the sorted array
+- Once the pivot is positioned appropriately, quick sort can be applied on either side of the pivot
+- Time complexity O(n log n)
+- Space complexity O(n)
+
+---
+
+## Data Structures
+
+What are data structures?
+- Collections of values, the relationships among them, and the functions or operations that can be applied to the data
+- The more time you spend as a developer, the more you'll need data structures
+
+ES2015 Class Syntax
+- What is a class?
+  - blueprint for creating objects with pre-defined properties and methods
+
+#### Linked List
+- A data structure that contains a head, tail and a length property
+- Linked Lists consist of nodes, and each node has a value and a pointer to another node or null
+- Comparisons with Arrays:
+  - Lists
+    - do not have indexes
+    - connected bia nodes with a next pointer
+    - random access is not allowd
+    - good at insertion and deletion
+  - Arrays
+    - indexed in order
+    - insertion and deletion can be expensive
+    - can quickly be accessed at a specific index
