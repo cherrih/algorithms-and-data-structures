@@ -17,3 +17,6 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort([4,10,9,3,2,7]));
 console.log(bubbleSort([8,1,2,3,4,5,6]));
+
+// time complexity: n^2
+// if nearly sorted, more like linear time O(n)
