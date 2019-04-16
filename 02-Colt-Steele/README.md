@@ -154,5 +154,7 @@ Pseudocode
 #### Selection Sort
 - Similar to bubble sort, but instead of first placing large value into sorted position, it places small values into sorted position
 - Go through and find smallest value, then place this in the first position
+- Better than bubble sort if you want to minimize the number of swaps eg worried about writing memory
 
-
+#### Insertion Sort
+- Builds up the sort by gradually creating a larger left half which is always sorted
