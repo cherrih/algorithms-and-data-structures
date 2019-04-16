@@ -11,3 +11,4 @@ function stringSearch(str, subStr) {
 
 console.log(stringSearch('hello yellow belly', 'ell')); // 3
 console.log(stringSearch('how now brown cow', 'ow')); // 4
+console.log(stringSearch('how now', 'orange')); // 0

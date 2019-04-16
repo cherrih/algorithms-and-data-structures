@@ -138,3 +138,15 @@ Pseudocode
   - if the value is too small, move the left pointer up
   - if the value is too large, move the right pointer down
 - if you never find the value, return -1
+
+---
+
+## Sorting
+
+#### What is sorting?
+- Process of rearranging the items in a collection (eg an array) so that the items are in some kind of order.
+- An incredibly common task
+- There are many ways to sort things, and different techniques have their own advantages and disadvantages
+
+#### Bubble Sort 
+- A sorting algorithm where the largest values bubble to the top
