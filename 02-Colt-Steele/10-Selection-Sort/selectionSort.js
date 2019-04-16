@@ -15,3 +15,8 @@ function selectionSort(arr) {
 
 console.log(selectionSort([1,56,4,7,3]))
 console.log(selectionSort([0,99,-2,5,9]))
+
+// time complexity: O(n^2) we have to compare every
+//  element to every other element in the array
+// as the length of the array grows, the number of comparison grows
+// roughly at the rate of n times
