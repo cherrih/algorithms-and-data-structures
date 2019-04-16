@@ -113,3 +113,10 @@ Logarithm is the inverse of exponentiation. The logarithm of a number roughly me
 - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them
 - Remember that strings are immutable so you will need to use methods like slice, substr or substring to make copies of strings
 - To make copies of objects use Object.assign or the spread operator
+
+---
+## Linear Search
+- This function accepts an array/string and a value
+- Loop through the array/string and check if the current element is equal to the value
+- If it is found, return the index
+- If not, return -1
