@@ -14,3 +14,19 @@ var twoSum = function(nums, target) {
 
 // time complexity: quadratic O(n^2)
 // https://leetcode.com/problems/two-sum/
+
+const twoSumLinear = (nums, target) => {
+  const result = [];
+  let map = {};
+  for (let i = 0; i < nums.length; i ++) {
+    map[target - nums[i]] = i;
+  }
+  for (let j = 0; j < nums.length; j ++) {
+    const num = nums[j];
+    if(map[num] && map[num] !== j){
+        result.push(j, map[num]);
+        return result;
+    }
+  }
+};
+// time complexity: linear O(n)
