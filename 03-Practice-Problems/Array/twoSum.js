@@ -12,4 +12,5 @@ var twoSum = function(nums, target) {
   }
 };
 
+// time complexity: quadratic O(n^2)
 // https://leetcode.com/problems/two-sum/
