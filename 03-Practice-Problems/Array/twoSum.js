@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/two-sum/
+
 var twoSum = function(nums, target) {
   const result = [];
   for (let i = 0; i < nums.length; i ++) {
@@ -13,7 +15,6 @@ var twoSum = function(nums, target) {
 };
 
 // time complexity: quadratic O(n^2)
-// https://leetcode.com/problems/two-sum/
 
 const twoSumLinear = (nums, target) => {
   const result = [];
