@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
 var lengthOfLongestSubstring = function(s) {
   if (s.length <= 1) return s.length;
   let map = {[s[0]]: 1};
