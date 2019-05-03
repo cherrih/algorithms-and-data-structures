@@ -11,3 +11,6 @@ var containsDuplicate = function(nums) {
 };
 
 console.log(containsDuplicate([0,1,2,0,8]));
+
+//time complexity: linear
+//space complexity: linear
