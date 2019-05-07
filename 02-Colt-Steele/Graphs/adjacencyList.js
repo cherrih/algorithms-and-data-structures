@@ -39,12 +39,12 @@ class Graph {
     dfs(node);
     return result;
   }
-  dfsIterative(node){
+  dfsIterative(start){
     const visited = {};
     const result = [];
-    const s = [node];
+    const s = [start];
     let vertex;
-    visited[node] = true;
+    visited[start] = true;
     while (s.length) {
       vertex = s.pop();
       result.push(vertex);
@@ -52,6 +52,23 @@ class Graph {
         if (!visited[n]) {
           visited[n] = true;
           s.push(n);
+        }
+      })
+    }
+    return result;
+  }
+  bfsIterative(start){
+    const visited = {};
+    const result = [];
+    const q = [start];
+    visited[start] = true;
+    while (q.length){
+      let vertex = q.shift();
+      result.push(vertex);
+      this.adjacencyList[vertex].forEach(n => {
+        if (!visited[n]) {
+          visited[n] = true;
+          q.push(n);
         }
       })
     }
@@ -75,3 +92,4 @@ g.addEdge('D', 'F');
 g.addEdge('E', 'F');
 console.log(g.dfsRecursive('A'));
 console.log(g.dfsIterative('A'));
+console.log(g.bfsIterative('A'));
