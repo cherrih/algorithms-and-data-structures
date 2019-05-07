@@ -14,6 +14,12 @@ class Graph {
     this.adjacencyList[v1] = this.adjacencyList[v1].filter(v => v !== v2);
     this.adjacencyList[v2] = this.adjacencyList[v2].filter(v => v !== v1);
   }
+  removeVertex(name){
+    this.adjacencyList[name].forEach(edge => {
+      this.removeEdge(name, edge);
+    })
+    delete this.adjacencyList[name];
+  }
 }
 
 var g = new Graph;
@@ -23,5 +29,5 @@ g.addVertex('Dallas');
 g.addEdge('Tokyo', 'San Francisco');
 g.addEdge('San Francisco', 'Dallas');
 console.log(g);
-g.removeEdge('San Francisco', 'Dallas');
+g.removeVertex('Dallas');
 console.log(g);
