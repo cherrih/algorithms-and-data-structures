@@ -20,14 +20,39 @@ class Graph {
     })
     delete this.adjacencyList[name];
   }
+  dfsRecursive(node){
+    const result = [];
+    const visited = {};
+    const adjacencyList = this.adjacencyList;
+    const dfs = (v) => {
+      if (!v){
+        return null;
+      }
+      result.push(v);
+      visited[v] = true;
+      adjacencyList[v].forEach(neighbor => {
+        if (!visited[neighbor]){
+          return dfs(neighbor);
+        }
+      })
+    }
+    dfs(node);
+    return result;
+  }
 }
 
 var g = new Graph;
-g.addVertex('Tokyo');
-g.addVertex('San Francisco');
-g.addVertex('Dallas');
-g.addEdge('Tokyo', 'San Francisco');
-g.addEdge('San Francisco', 'Dallas');
-console.log(g);
-g.removeVertex('Dallas');
-console.log(g);
+g.addVertex('A');
+g.addVertex('B');
+g.addVertex('C');
+g.addVertex('D');
+g.addVertex('E');
+g.addVertex('F');
+g.addEdge('A', 'B');
+g.addEdge('A', 'C');
+g.addEdge('B', 'D');
+g.addEdge('C', 'E');
+g.addEdge('D', 'E');
+g.addEdge('D', 'F');
+g.addEdge('E', 'F');
+console.log(g.dfsRecursive('A'));
