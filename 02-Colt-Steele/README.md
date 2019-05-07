@@ -210,3 +210,14 @@ ES2015 Class Syntax
     - indexed in order
     - insertion and deletion can be expensive
     - can quickly be accessed at a specific index
+
+#### Graph
+- Adjacency List
+  - Can take up less space (in sparse graphs)
+  - Faster to iterate over all edges
+  - Can be slower to look up specific edge
+  - Real world data tends to be sparse
+- Adjacency Matrix
+  - Takes up more space (in sparse graphs)
+  - Slower to iterate over all edges
+  - Faster to lookup specific edge
