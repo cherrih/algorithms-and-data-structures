@@ -11,22 +11,8 @@ class Graph {
     this.adjacencyList[v2].push(v1);
   }
   removeEdge(v1, v2){
-    let newV1 = [];
-    let newV2 = [];
-    for (let i = 0; i < this.adjacencyList[v1].length; i ++) {
-      if (this.adjacencyList[v1][i] === v2){
-        newV1 = [...this.adjacencyList[v1].slice(0,i), ...this.adjacencyList[v1].slice(i + 1)];
-        break;
-      }
-    }
-    for (let i = 0; i < this.adjacencyList[v2].length; i ++) {
-      if (this.adjacencyList[v2][i] === v1){
-        newV2 = [...this.adjacencyList[v2].slice(0,i), ...this.adjacencyList[v2].slice(i + 1)];
-        break;
-      }
-    }
-    this.adjacencyList[v1] = newV1;
-    this.adjacencyList[v2] = newV2;
+    this.adjacencyList[v1] = this.adjacencyList[v1].filter(v => v !== v2);
+    this.adjacencyList[v2] = this.adjacencyList[v2].filter(v => v !== v1);
   }
 }
 
